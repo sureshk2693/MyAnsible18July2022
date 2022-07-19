@@ -5,8 +5,8 @@
   - name: Install apache httpd  (state=present is optional)
     apt:
       name: apache2
-      state: present
-  - name: I want to start the webserver
+      state: absent
+  - name: I want to stop the webserver
     service: 
       name: apache2
-      state: started
+      state: stopped
