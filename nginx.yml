@@ -9,10 +9,4 @@
   - service:
       name: nginx
       state: started
-  - name: Uninstalling apache2 server
-    apt:
-      name: apache2
-      state: absent
-  - service:
-      name: apache2
-      state: stopped
+  
