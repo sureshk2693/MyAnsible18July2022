@@ -10,6 +10,6 @@
      when: ansible_os_family== "Debian"
    - name: stop webserver on ubuntu
      service:
-        name: apache2
-        state: stopped
-        when: ansible_os_family== "Debian"
+       name: apache2
+       state: stopped
+     when: ansible_os_family== "Debian"
