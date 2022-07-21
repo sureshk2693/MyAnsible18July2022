@@ -8,7 +8,7 @@
       name: apache2
       state: present
      when: ansible_os_family=="Debian"
-   - name: start webser on ubuntu
+   - name: start webserver on ubuntu
      service:
         name: restart the service
         state: restarted
