@@ -1,0 +1,15 @@
+---
+- hosts: all
+  become: yes
+  gather_facts: yes
+  tasks:
+   - name: "i want to install apache2"
+     apt:
+      name: apache2
+      state: present
+     when: ansible_os_family=="Debian"
+   - name: start webser on ubuntu
+     service:
+        name: restart the service
+        state: restarted
+        when: ansible_os_family=="Debian"
