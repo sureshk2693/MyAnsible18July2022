@@ -11,5 +11,5 @@
    - name: start webserver on ubuntu
      service:
         name: restart the service
-        state: restarted
+        state: restart
         when: ansible_os_family=="Debian"
