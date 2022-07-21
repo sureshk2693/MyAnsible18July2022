@@ -6,7 +6,7 @@
    - name: "i want to install apache2"
      apt:
       name: apache2
-      state: present
+      state: latest
      when: ansible_os_family== "Debian"
    - name: start webserver on ubuntu
      service:
