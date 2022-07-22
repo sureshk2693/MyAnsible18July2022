@@ -5,21 +5,21 @@
   tasks:
    - name: "i want to install apache2"
      apt:
-      name: apache2
-      state: absent
+      name: "{{mywebserverspackonubuntu}}"
+      state: present
      when: ansible_os_family == "Debian"
    - name: start webserver on ubuntu
      service:
-       name: httpd
-       state: stopped
-     when: ansible_os_family == "Redhat"
+       name: "{{mywebserverspackonubuntu}}"
+       state: restarted
+     when: ansible_os_family == "Debian"
    - name: Install webserver on redhat ansible nodes
      yum:
-       name: httpd
+       name: "{{mywebserverspackonredhat}}"
        state: present
      when: ansible_os_family == "RedHat"
    - name: starting service on redhat
      service:
-       name: httpd
+       name: "{{mywebserverspackonredhat}}"
        state: started
      when: ansible_os_family == "RedHat"
