@@ -10,6 +10,11 @@
      when: ansible_os_family == "Debian"
    - name: start webserver on ubuntu
      service:
-       name: apache2
+       name: httpd
        state: stopped
-     when: ansible_os_family == "Debian"
+     when: ansible_os_family == "Redhat"
+   - name: Install webserver on redhat ansible nodes
+     yum:
+       name: httpd
+       state: present
+     when: ansible_os_family == "RedHat"
