@@ -2,13 +2,13 @@
 - hosts: mywebservers
   become: yes
   tasks:
-   - name: install java on ubuntu server.
+  - name: install java on ubuntu server.
      apt: 
        name: openjdk-8-jre
        state: present 
      when: ansible_os_family == "Debian"
 
-    - name: install java on redhat server.
+  - name: install java on redhat server.
       yum:
         name: java-1.8.0-openjdk
         state: present
