@@ -3,5 +3,5 @@
 172.31.36.19
 
 [mywebservers:vars]
-mywebserverspackonubuntu: apache22222
+mywebserverspackonubuntu: apache2
 mywebserverspackonredhat: httpd
