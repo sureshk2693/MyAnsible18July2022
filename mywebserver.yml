@@ -18,3 +18,8 @@
        name: httpd
        state: present
      when: ansible_os_family == "RedHat"
+   - name: starting service on redhat
+     service:
+       name: httpd
+       state: started
+     when: ansible_os_family == "Redhat"
