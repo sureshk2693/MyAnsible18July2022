@@ -3,14 +3,14 @@
 - hosts: mywebservers
   become: yes
   tasks:
-  - name: install java on ubuntu server.
-     apt: 
+   - name: install java on ubuntu server.
+      apt: 
        name: "{{myjavapackonubuntu}}"
        state: present 
-     when: ansible_os_family == "Debian"
+      when: ansible_os_family == "Debian"
 
-  - name: install java on redhat server.
+   - name: install java on redhat server.
       yum:
-        name: "{{myjavapackonredhat}}"
-        state: present
+       name: "{{myjavapackonredhat}}"
+       state: present
       when: ansible_os_family == "RedHat"
