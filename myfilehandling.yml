@@ -14,4 +14,9 @@
     apt:
       name: apache2
       state: present
+
+  - name: Copying dynamic file to node server.
+    template: 
+       src: myindex.j2
+       dest: /var/www/html/index.html
       
