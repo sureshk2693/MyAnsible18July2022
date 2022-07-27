@@ -27,7 +27,7 @@
       dest: /home/ubuntu/s3file
       force_basic_auth: yes
 
-    handlers:
+  handlers:
     - name: startwebserver
       service:
          name: apache2
