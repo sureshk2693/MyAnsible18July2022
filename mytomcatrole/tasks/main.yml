@@ -1,2 +1,7 @@
 ---
 # tasks file for mytomcatrole
+
+- include_tasks: myadduser.yml
+- include_tasks: installjava.yml
+- include_tasks: download.yml
+- include_tasks: permission.yml
